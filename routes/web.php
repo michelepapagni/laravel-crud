@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
+//Se un utente atterra sull'url /libri verrà portato nel controller BookController al metodo Index
+// Route::get('/utenti', 'UserController@index');
+Route::get('/', function() {
     return view('welcome');
 });
+
+Route::resource('/users', 'UserController');
